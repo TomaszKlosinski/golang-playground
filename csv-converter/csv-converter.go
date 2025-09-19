@@ -23,7 +23,7 @@ func main() {
 	}
 
 	headers := records[0]
-	data := make([]map[string]string, 0, len(records)-1)
+	data := []map[string]string{} // slice of maps
 
 	for rowIndex, row := range records[1:] {
 		if len(row) != len(headers) {
